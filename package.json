@@ -28,7 +28,8 @@
     "test": "jest",
     "tsc": "tsc",
     "clean": "rimraf artifacts",
-    "build": "npm run clean && npm run tsc --"
+    "build": "npm run clean && npm run tsc --",
+    "lint": "tslint src/**/*.ts"
   },
   "jest": {
     "preset": "jest-expo"
@@ -40,6 +41,7 @@
     "react-native": "0.54.0",
     "react-native-elements": "^0.19.1",
     "react-navigation": "^1.5.11",
-    "react-redux": "^5.0.7"
+    "react-redux": "^5.0.7",
+    "tslint-config-airbnb": "^5.8.0"
   }
 }
