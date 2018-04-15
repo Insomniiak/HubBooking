@@ -21,7 +21,8 @@
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
-    "start": "react-native-scripts start",
+    "start": "npm run build && concurrently -r 'npm run watch' 'react-native-scripts start'",
+    "start-prev": "react-native-scripts start",
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
@@ -29,7 +30,8 @@
     "tsc": "tsc",
     "clean": "rimraf artifacts",
     "build": "npm run clean && npm run tsc --",
-    "lint": "tslint src/**/*.ts"
+    "lint": "tslint src/**/*.ts",
+    "watch": "npm run build -- -w"
   },
   "jest": {
     "preset": "jest-expo"
